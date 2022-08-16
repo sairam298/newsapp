@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.head{
+    font-family: 'Gill Sans';
+    font-size: 50px;
+    padding-left: 10px;
+}

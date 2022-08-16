@@ -1,0 +1,42 @@
+.example-card {
+  max-width: 500px;
+}
+
+.align{
+    text-align: -webkit-center;
+    padding-top: 50px;
+    
+    
+}
+.error-msg{
+  color: red;
+}
+.align-txt{
+    text-align: center;
+}
+.Heading{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 35px;
+}
+.bc{
+    background-image: url('https://www.mapertunity.com/wp-content/uploads/2019/10/job-search-tips-1024x683.jpg') ;
+    background-size: 1500px;    
+    
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 60%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }
+  .error{
+    color: red;
+  }
+  

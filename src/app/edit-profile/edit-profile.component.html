@@ -1,0 +1,58 @@
+<body class="bc">
+<div class="align">
+    <div class="example-card">
+     <mat-card >
+      <h3>Edit Password</h3>
+         <div class="align">
+            <form class="example-form" [formGroup]="jobRegister">
+              
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>First Name</mat-label>
+                  <input matInput formControlName="firstName" id="fname">
+                </mat-form-field><br>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput formControlName="lastName">
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Email Id</mat-label>
+                    <input matInput formControlName="email">
+                          </mat-form-field><br>
+                          <small class="error-msg">{{errorMsg}}</small><br>
+                          <mat-form-field class="example-full-width" appearance="fill">
+                            <mat-label>Old Password</mat-label>
+                            <input matInput formControlName="oldPword" type="password">
+                          </mat-form-field>
+                
+                    
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>New Password</mat-label>
+                    <input matInput formControlName="password" type="password">
+                    <mat-error>
+                      <span class="error" *ngIf="jobRegister.get('password')?.hasError('required')">Password is required</span>
+                      <span class="error" *ngIf="jobRegister.get('password')?.hasError('minLength')">Password should be atleast 8 characters</span>
+                      <span class="error" *ngIf="jobRegister.get('password')?.hasError('maxLength')">Password should be atmost 15 characters</span>
+                      <span class="error" *ngIf="jobRegister.get('password')?.hasError('pattern')">Password must contain bold, small, number and symbol</span>
+                    </mat-error>
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput formControlName="confirmPassword" type="password">
+                    <mat-error>
+                      <span class="error" *ngIf="jobRegister.get('confirmPassword')?.hasError('required')">Confirm Password is required</span>
+                      <span class="error" *ngIf="jobRegister.get('confirmPassword')?.hasError('notEqualToPassword')">Enter same passwords</span>
+                    </mat-error>
+                  </mat-form-field>
+                  
+              
+              </form>
+
+              <button mat-raised-button color="accent" [disabled]="!this.jobRegister.valid" (click)="onSubmit()">Submit</button>
+              </div>
+              
+ 
+     </mat-card>
+     
+    </div>
+</div>
+</body>

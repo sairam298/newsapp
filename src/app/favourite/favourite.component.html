@@ -1,0 +1,38 @@
+<div class="card">
+<h1>{{message}}</h1>
+<div fxLayout="row wrap" fxLayoutGap="20px">
+    <div fxFlex="23%" *ngFor="let contents of favNews; let i = index">
+  
+      <mat-card class="example-card">
+  
+        <mat-card-header>
+          <a href={{contents.url}} (click)="addRefer(i)">
+            <mat-card-title>{{contents.title}}</mat-card-title>
+            <mat-card-subtitle>{{contents.author}}</mat-card-subtitle>
+          </a>
+        </mat-card-header>
+        <a href={{contents.url}} (click)="addRefer(i)">
+        <img mat-card-image src={{contents.urlToImage}}>
+        </a>
+        <mat-card-content>
+          <a href={{contents.url}} (click)="addRefer(i)">
+            <p>
+              {{contents["content"]}}
+            </p>
+          </a>
+        </mat-card-content>
+  
+        <mat-card-actions>
+          <button *ngIf="news" mat-button (click)="deleteFav(i)">Detele</button>
+        </mat-card-actions>
+        <mat-card-actions>
+          <button *ngIf="!news" mat-button (click)="addFav(i)">Add to Favourite</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  
+  <button id="a">
+  
+  </button>
+</div>

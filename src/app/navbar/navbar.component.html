@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <span class="image">
+    <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV8-jHh2MntsT2bbaEY41yrFgQRj-_dP4Vnw&usqp=CAU" height="55px" width="100px">
+</span>
+    <span class="head">NEWS APP</span>
+    <span class="example-spacer"></span>
+
+    <form>
+        <input type="text" placeholder="Search" [(ngModel)]="searchT" name="search">       
+        <button type="submit" class="btn btn-success" (click)="search()">Go!</button>
+        
+    </form>
+
+    <button mat-button routerLink="Home">Home</button>
+    <button mat-button routerLink="Favourite">Favorite</button>
+    <button mat-button *ngIf="loggedIn" routerLink="edit">Edit Profile</button>
+    <button mat-raised-button color="accent" (click)="logoutUser()" *ngIf="loggedIn">Logout</button>
+    <button mat-raised-button color="accent" routerLink="Login" *ngIf="!loggedIn">Login/Register</button>
+</mat-toolbar>

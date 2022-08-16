@@ -1,0 +1,50 @@
+.example-card {
+    max-width: 500px;
+  }
+  
+  .align{
+      text-align: -webkit-center;
+      padding-top: 50px;
+      color: black;
+      
+      
+  }
+  .error-msg{
+    color: red;
+  }
+  .align-txt{
+      text-align: center;
+  }
+  .Heading{
+      font-family: 'Franklin Gothic Medium';
+      font-size: 35px;
+  }
+  .bc{
+      background-image: url('https://st.depositphotos.com/1032463/1373/i/950/depositphotos_13732950-stock-photo-background-of-old-vintage-newspapers.jpg') ;
+      background-size: 1500px;    
+      
+  }
+
+  .example-form {
+      min-width: 150px;
+      max-width: 500px;
+      width: 100%;
+    }
+    
+    .example-full-width {
+      width: 60%;
+      
+    }
+    
+    td {
+      padding-right: 8px;
+    }
+    .error{
+      color: red;
+    }
+    h3{
+      font-size: 30px;
+      font-family: Verdana;
+      color: darkred;
+    }
+    
